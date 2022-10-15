@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
+import GeneralInfo from './components/GeneralInfo'
+import EducationInfo from './components/EducationInfo'
+import ExperienceInfo from './components/ExperienceInfo'
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-  }
-
-
   render() {
     return (
-      <div className="App">
+      <div>
+        <GeneralInfo />
+        <EducationInfo />
+        <ExperienceInfo />
       </div>
     );
   }

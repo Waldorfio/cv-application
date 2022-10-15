@@ -10,28 +10,25 @@ class GeneralInfo extends Component {
             phone: '',
         }
 
-        this.handleChange = this.nameChange.bind(this);
-        this.handleChange = this.emailChange.bind(this);
-        this.handleChange = this.phoneChange.bind(this);
+        this.nameChange = this.nameChange.bind(this);
+        this.emailChange = this.emailChange.bind(this);
+        this.phoneChange = this.phoneChange.bind(this);
     }
 
     nameChange(e) {
         this.setState({
             name: e.target.value,
         })
-        alert('new name: '+this.state.name);
     }
     emailChange(e) {
         this.setState({
             email: e.target.value,
         })
-        alert('new email: '+this.state.email);
     }
     phoneChange(e) {
         this.setState({
             phone: e.target.value,
         })
-        alert('new phone: '+this.state.phone);
     }
 
 

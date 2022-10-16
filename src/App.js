@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
-import GeneralInfo from './components/GeneralInfo'
-import EducationInfo from './components/EducationInfo'
-import ExperienceInfo from './components/ExperienceInfo'
+import FormInput from './components/FormInput'
+import FormView from './components/FormView'
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <GeneralInfo />
-        <EducationInfo />
-        <ExperienceInfo />
+      <div id='container'>
+        <FormInput />
+        <FormView />
       </div>
     );
   }

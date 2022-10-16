@@ -1,0 +1,56 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    user-select: none;   /* Disables text highlighting. Individually removed later for to-do items */
+}
+body,html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Start */
+
+#general-info, #education-info, #experience-info {
+    border: 1px solid red;
+}
+
+/* Container Styling */
+#container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 35px; /* gap between input form, and resume viewer on right */
+}
+#input-container, #view-container {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#input-container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;  /* gap between input forms */
+}
+
+#experience-info, #education-info {
+    display: grid;
+    grid-template-rows: 1fr 30px;
+}
+
+/* Form Styling */
+
+#general-info-form {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    padding: 15px;
+}
+#experience-info-form {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    padding: 15px;
+}
+#education-info-form {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    padding: 15px;
+}

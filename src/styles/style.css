@@ -104,3 +104,15 @@ h4 {
 .material-symbols-outlined {
     font-size: 14px !important;
 }
+
+/* Desktops, iPads */
+@media only screen and (min-width: 600px) {
+}
+/* Mobile device specific styling */
+@media screen and (max-width: 600px) {
+    #container {
+        padding: 10px 10px 10px 10px;
+        margin: 5%;
+        height: 90vh;
+    }
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './styles/style.css';
 import FormInput from './components/FormInput'
 import FormView from './components/FormView'
 

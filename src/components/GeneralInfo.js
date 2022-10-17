@@ -61,16 +61,16 @@ class GeneralInfo extends Component {
 
     render() {
         return (
-            <div>
-                <form>
-                    <label> Name:<input type="text" id="name" onChange={this.nameChange}></input></label>
-                    <label> Title:<input type="text" id="title" onChange={this.titleChange}></input></label>
-                    <label> Email:<input type="text" id="email" onChange={this.emailChange}></input></label>
-                    <label> Phone:<input type="text" id="phone" onChange={this.phoneChange}></input></label>
-                    <label> Location:<input type="text" id="location" onChange={this.locationChange}></input></label>
-                    <label> Summary:<input type="text" id="summary" onChange={this.summaryChange}></input></label>
+            <div id='general-info'>
+                <form id='general-info-form'>
+                    Personal Details
+                    <label><input type="text" onChange={this.nameChange} placeholder="Name"></input></label>
+                    <label><input type="text" onChange={this.titleChange} placeholder="Job Title"></input></label>
+                    <label><input type="text" onChange={this.emailChange} placeholder="Email"></input></label>
+                    <label><input type="text" onChange={this.phoneChange} placeholder="Phone"></input></label>
+                    <label><input type="text" onChange={this.locationChange} placeholder="Location"></input></label>
+                    <label><input type="text" onChange={this.summaryChange} placeholder="Summary"></input></label>
                 </form>
-                < Form general={this.state} />
             </div>
         )
     }

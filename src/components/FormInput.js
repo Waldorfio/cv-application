@@ -8,8 +8,8 @@ class FormInput extends Component {
     return (
       <div id='input-container'>
         <GeneralInfo />
-        <EducationInfo />
         <ExperienceInfo />
+        <EducationInfo />
       </div>
     );
   }

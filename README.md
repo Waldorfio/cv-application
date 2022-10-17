@@ -1,14 +1,13 @@
 # Project: CV Application
-A CV application website.
+A CV application website, developed to enforce my learnings on React fundamentals (components and states management).
 Application developed using React and CSS3. Built using the create-react-app.
 
 ### Features
-- 
+- Allows users to create their own resume using a ready made template
 
 ### Goals
 - Gain familiarity working with class based components in React
 - Practice passing props & states through class based components in React
-- Practice the implementation of CSS styling with React
 
 ### Challenges Faced
 - Adapting to class based components in React
@@ -30,6 +29,7 @@ OR
 1. 
 
 ## Future Features
-- 
+- Refactor code to TypeScript
+- Add option to export Resume to PDF
 
 ## Dependencies

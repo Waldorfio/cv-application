@@ -44,16 +44,16 @@ class App extends Component {
     this.expStart = this.expStart.bind(this);
     this.expEnd = this.expEnd.bind(this);
     this.expDesc = this.expDesc.bind(this);
-    this.expDel = this.expDesc.bind(this);
-    this.expAdd = this.expDesc.bind(this);
+    this.expDel = this.expDel.bind(this);
+    this.expAdd = this.expAdd.bind(this);
 
     this.course = this.course.bind(this);
     this.uni = this.uni.bind(this);
     this.eduStart = this.eduStart.bind(this);
     this.eduEnd = this.eduEnd.bind(this);
     this.eduDesc = this.eduDesc.bind(this);
-    this.eduDel = this.eduDesc.bind(this);
-    this.eduAdd = this.eduDesc.bind(this);
+    this.eduDel = this.eduDel.bind(this);
+    this.eduAdd = this.eduAdd.bind(this);
   }
 
   // General Functions

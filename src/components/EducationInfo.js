@@ -13,7 +13,7 @@ class EducationInfo extends Component {
                     <label><input type="text" onChange={eduEnd} placeholder="End Date"></input></label>
                     <label><input type="text" onChange={eduDesc} placeholder="Description"></input></label>
                 </form>
-                <div class="btn-group">
+                <div className="btn-group">
                     <input type='button' value='Delete' onClick={eduDel}></input>
                     <input type='button' value='Add' onClick={eduAdd}></input>
                 </div>

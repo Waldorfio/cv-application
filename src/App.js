@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import './styles/style.css';
+import GeneralInfo from './components/GeneralInfo'
+import ExperienceInfo from './components/ExperienceInfo'
+import EducationInfo from './components/EducationInfo'
 import FormView from './components/FormView'
 
 class App extends Component {
@@ -29,28 +32,28 @@ class App extends Component {
     }
 
     // Binding functions
-    fullName = this.name.bind(this);
-    title = this.title.bind(this);
-    email = this.email.bind(this);
-    phone = this.phone.bind(this);
-    loc = this.loc.bind(this);
-    summary = this.summary.bind(this);
+    this.fullName = this.fullName.bind(this);
+    this.title = this.title.bind(this);
+    this.email = this.email.bind(this);
+    this.phone = this.phone.bind(this);
+    this.loc = this.loc.bind(this);
+    this.summary = this.summary.bind(this);
 
-    company = this.company.bind(this);
-    expPos = this.expPos.bind(this);
-    expStart = this.expStart.bind(this);
-    expEnd = this.expEnd.bind(this);
-    expDesc = this.expDesc.bind(this);
-    expDel = this.expDesc.bind(this);
-    expAdd = this.expDesc.bind(this);
+    this.company = this.company.bind(this);
+    this.expPos = this.expPos.bind(this);
+    this.expStart = this.expStart.bind(this);
+    this.expEnd = this.expEnd.bind(this);
+    this.expDesc = this.expDesc.bind(this);
+    this.expDel = this.expDesc.bind(this);
+    this.expAdd = this.expDesc.bind(this);
 
-    course = this.course.bind(this);
-    uni = this.uni.bind(this);
-    eduStart = this.eduStart.bind(this);
-    eduEnd = this.eduEnd.bind(this);
-    eduDesc = this.eduDesc.bind(this);
-    eduDel = this.eduDesc.bind(this);
-    eduAdd = this.eduDesc.bind(this);
+    this.course = this.course.bind(this);
+    this.uni = this.uni.bind(this);
+    this.eduStart = this.eduStart.bind(this);
+    this.eduEnd = this.eduEnd.bind(this);
+    this.eduDesc = this.eduDesc.bind(this);
+    this.eduDel = this.eduDesc.bind(this);
+    this.eduAdd = this.eduDesc.bind(this);
   }
 
   // General Functions

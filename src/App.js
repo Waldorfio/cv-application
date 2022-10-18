@@ -169,9 +169,9 @@ class App extends Component {
             eduAdd = {this.eduAdd}
           />
         </div>
-        <div id='view-container'>
-          <FormView output={this.state}/> 
-        </div>
+        
+        <FormView output={this.state}/> 
+
       </div>
     );
   }

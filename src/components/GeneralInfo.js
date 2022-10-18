@@ -1,22 +1,18 @@
 import React, { Component } from 'react'
 
 class GeneralInfo extends Component {
-    constructor(props) {
-        super(props)
-    }
-
     render() {
         const { fullName, title, email, phone, loc, summary } = this.props;
         return (
             <div id='general-info'>
                 <form id='general-info-form'>
                     Personal Details
-                    <label><input type="text" onChange={fullName(e)} placeholder="Name"></input></label>
-                    <label><input type="text" onChange={title(e)} placeholder="Job Title"></input></label>
-                    <label><input type="text" onChange={email(e)} placeholder="Email"></input></label>
-                    <label><input type="text" onChange={phone(e)} placeholder="Phone"></input></label>
-                    <label><input type="text" onChange={loc(e)} placeholder="Location"></input></label>
-                    <label><input type="text" onChange={summary(e)} placeholder="Summary"></input></label>
+                    <label><input type="text" onChange={fullName} placeholder="Name"></input></label>
+                    <label><input type="text" onChange={title} placeholder="Job Title"></input></label>
+                    <label><input type="text" onChange={email} placeholder="Email"></input></label>
+                    <label><input type="text" onChange={phone} placeholder="Phone"></input></label>
+                    <label><input type="text" onChange={loc} placeholder="Location"></input></label>
+                    <label><input type="text" onChange={summary} placeholder="Summary"></input></label>
                 </form>
             </div>
         )

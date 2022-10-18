@@ -6,7 +6,7 @@ Application developed using React and CSS3. Built using the create-react-app.
 - Allows users to create their own resume using a ready made template
 
 ### Goals
-- Practice the fundamentals of state and prop management with Class based components
+- Practice the fundamentals of state and component management with Class based components
 - Create a dynamic app with multiple components and states
 
 ### Challenges Faced

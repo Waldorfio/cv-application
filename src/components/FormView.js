@@ -13,7 +13,7 @@ class FormView extends Component {
             <div id="contact-container">
                 <p id="general-number">
                     <span className="material-symbols-outlined">call</span>
-                    {output.number}
+                    {output.phone}
                 </p>
                 <p id="general-email">
                     <span className="material-symbols-outlined">mail</span>

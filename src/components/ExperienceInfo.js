@@ -7,7 +7,7 @@ class ExperienceInfo extends Component {
             <div id='experience-info' className={keyy} key={keyy}>
                 <form id='experience-info-form'>
                     Work Experience
-                    <label><input type="text" onChange={(e) => company(e, keyy)} placeholder="Company"></input></label>
+                    <label><input type="text" onChange={company} placeholder="Company"></input></label>
                     <label><input type="text" onChange={expPos} placeholder="Position"></input></label>
                     <label><input type="text" onChange={expStart} placeholder="Start Date"></input></label>
                     <label><input type="text" onChange={expEnd} placeholder="End Date"></input></label>

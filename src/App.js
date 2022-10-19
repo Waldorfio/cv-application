@@ -33,6 +33,8 @@ class App extends Component {
       //   eduDesc: {id: 'a', value: ''},
       // },
 
+      experience: [1,2,3,4],
+
       expComp: [],
       expPos: [],
       expStart: [],
@@ -122,11 +124,18 @@ class App extends Component {
     e.preventDefault();
 
   }
-  expAdd(key) {
-    alert('adding exp'+key);
+  expAdd(e) {
+    alert('adding exp');
+    const experience = this.state;
+    this.setState({
+      experience: [...experience, experience[experience.length - 1]], // Append an incremented number
+    })
   }
   expDel(key) {
     alert('deleting exp'+key)
+    this.setState(state => ({
+      experience: state.experience.filter(a => a !== key),
+    }));
   }
 
   // Education Functions
@@ -170,7 +179,7 @@ class App extends Component {
             summary = {this.summary}
           />
 
-          { [1,2].map((num, idx) => (
+          { this.state.experience.map((num, idx) => (
           <ExperienceInfo
             keyy = {idx}
             company = {this.company}

@@ -27,7 +27,18 @@ class FormView extends Component {
           </div>
 
         <div id="experience-view">
-          <h3>WORK EXPERIENCE</h3>
+          <h3>{output.expComp}</h3>
+          <h4>Software Engineer</h4>
+          <span className="small-text"><i>A Company | </i><b>2018 - Present</b></span>
+          <p className="small-text">
+              - Sed ut perspiciatis unde omnis iste natus error sit.<br></br>
+              - Voluptatem accusantium doloremque laudantium, totam.<br></br>
+              - Rem aperiam, eaque ipsa quae ab illo inventore veritatis. 
+          </p>
+        </div>
+
+        <div id="experience-view">
+          <h3>{output.expComp}</h3>
           <h4>Software Engineer</h4>
           <span className="small-text"><i>A Company | </i><b>2018 - Present</b></span>
           <p className="small-text">

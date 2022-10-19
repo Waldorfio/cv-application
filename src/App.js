@@ -11,24 +11,39 @@ class App extends Component {
     
     // Setting state
     this.state = {
-      fullName: '',
-      title: '',
-      email: '',
-      phone: '',
-      location: '',
-      summary: '',
+      fullName: 'John Doeman',
+      title: 'Software Engineer',
+      email: 'john.doeman@gmail.com',
+      phone: '0412345678',
+      location: 'Brisbane, QLD',
+      summary: 'A summary piece of text should be written here.',
       
+      // experience: {
+      //   expComp: [{value: ''}],
+      //   expPos:  {id: 'a', value: ''},
+      //   expStart: {id: 'a', value: ''},
+      //   expEnd: {id: 'a', value: ''},
+      //   expDesc: {id: 'a', value: ''},
+      // },
+      // company: {
+      //   course: {id: 'a', value: ''},
+      //   uni: {id: 'a', value: ''},
+      //   eduStart: {id: 'a', value: ''},
+      //   eduEnd: {id: 'a', value: ''},
+      //   eduDesc: {id: 'a', value: ''},
+      // },
+
       expComp: [],
       expPos: [],
       expStart: [],
       expEnd: [],
       expDesc: [],
 
-      course: [],
-      uni: [],
-      eduStart: [],
-      eduEnd: [],
-      eduDesc: [],
+      // course: [],
+      // uni: [],
+      // eduStart: [],
+      // eduEnd: [],
+      // eduDesc: [],
     }
 
     // Binding functions
@@ -83,8 +98,12 @@ class App extends Component {
   }
 
   // Experience Functions
-  company(e) {
+  company(e, key) {
     e.preventDefault();
+    this.setState({
+      expComp: e.target.value,
+    });
+
 
   }
   expPos(e) {
@@ -103,11 +122,11 @@ class App extends Component {
     e.preventDefault();
 
   }
-  expAdd() {
-    alert('adding exp');
+  expAdd(key) {
+    alert('adding exp'+key);
   }
-  expDel() {
-    alert('deleting exp')
+  expDel(key) {
+    alert('deleting exp'+key)
   }
 
   // Education Functions
@@ -150,7 +169,10 @@ class App extends Component {
             loc = {this.loc}
             summary = {this.summary}
           />
-          <ExperienceInfo 
+
+          { [1,2].map((num, idx) => (
+          <ExperienceInfo
+            keyy = {idx}
             company = {this.company}
             expPos = {this.expPos}
             expStart = {this.expStart}
@@ -158,7 +180,18 @@ class App extends Component {
             expDesc = {this.expDesc}
             expDel = {this.expDel}
             expAdd = {this.expAdd}
-          />
+          />)) }
+
+          {/* <ExperienceInfo
+            key = {this.state.i}
+            company = {this.company}
+            expPos = {this.expPos}
+            expStart = {this.expStart}
+            expEnd = {this.expEnd}
+            expDesc = {this.expDesc}
+            expDel = {this.expDel}
+            expAdd = {this.expAdd}
+          /> */}
           <EducationInfo 
             course = {this.course}
             uni = {this.uni}

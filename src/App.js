@@ -124,18 +124,20 @@ class App extends Component {
     e.preventDefault();
 
   }
-  expAdd(e) {
+  expAdd(e) { // NOT WORKING YET, TYPEERROR: expeirence is not iterable
     alert('adding exp');
     const experience = this.state;
     this.setState({
       experience: [...experience, experience[experience.length - 1]], // Append an incremented number
     })
+    alert('new arr: '+this.state.experience)
   }
-  expDel(key) {
-    alert('deleting exp'+key)
-    this.setState(state => ({
-      experience: state.experience.filter(a => a !== key),
-    }));
+  expDel(key) { /// ISSUE: Can only delete last experience component
+    alert('deleting exp: '+key)
+    // this.setState(state => ({
+    //   experience: state.experience.filter(a => a !== key), /// Delete item of specific key
+    // }));
+    this.setState({experience: this.state.experience.filter(a => a !== key)}) /// Delete item of specific key
   }
 
   // Education Functions

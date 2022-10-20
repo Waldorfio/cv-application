@@ -7,11 +7,11 @@ class EducationInfo extends Component {
             <div id='education-info' className={keyy} key={keyy}>
                 <form id='education-info-form'>
                     Education
-                    <label><input type="text" onChange={course} placeholder="Course"></input></label>
-                    <label><input type="text" onChange={uni} placeholder="University"></input></label>
-                    <label><input type="text" onChange={eduStart} placeholder="Start Date"></input></label>
-                    <label><input type="text" onChange={eduEnd} placeholder="End Date"></input></label>
-                    <label><input type="text" onChange={eduDesc} placeholder="Description"></input></label>
+                    <label><input type="text" onChange={(e) => course(e, keyy)} placeholder="Course"></input></label>
+                    <label><input type="text" onChange={(e) => uni(e, keyy)} placeholder="University"></input></label>
+                    <label><input type="text" onChange={(e) => eduStart(e, keyy)} placeholder="Start Date"></input></label>
+                    <label><input type="text" onChange={(e) => eduEnd(e, keyy)} placeholder="End Date"></input></label>
+                    <label><input type="text" onChange={(e) => eduDesc(e, keyy)} placeholder="Description"></input></label>
                 </form>
                 <div className="btn-group">
                     <input type='button' value='Delete' onClick={(e) => eduDel(keyy)}></input>

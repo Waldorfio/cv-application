@@ -7,11 +7,11 @@ class ExperienceInfo extends Component {
             <div id='experience-info' className={keyy} key={keyy}>
                 <form id='experience-info-form'>
                     Work Experience
-                    <label><input type="text" onChange={company} placeholder="Company"></input></label>
-                    <label><input type="text" onChange={expPos} placeholder="Position"></input></label>
-                    <label><input type="text" onChange={expStart} placeholder="Start Date"></input></label>
-                    <label><input type="text" onChange={expEnd} placeholder="End Date"></input></label>
-                    <label><input type="text" onChange={expDesc} placeholder="Description"></input></label>
+                    <label><input type="text" onChange={(e) => company(e, keyy)} placeholder="Company"></input></label>
+                    <label><input type="text" onChange={(e) => expPos(e, keyy)} placeholder="Position"></input></label>
+                    <label><input type="text" onChange={(e) => expStart(e, keyy)} placeholder="Start Date"></input></label>
+                    <label><input type="text" onChange={(e) => expEnd(e, keyy)} placeholder="End Date"></input></label>
+                    <label><input type="text" onChange={(e) => expDesc(e, keyy)} placeholder="Description"></input></label>
                 </form>
                 <div className="btn-group">
                     <input type='button' value='Delete' onClick={(e) => expDel(keyy)}></input>

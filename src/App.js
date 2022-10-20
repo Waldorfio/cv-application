@@ -18,14 +18,14 @@ class App extends Component {
       location: 'Brisbane, QLD',
       summary: 'A summary piece of text should be written here.',
 
-      expKeys: [1],  // experience keys (just index for now)
+      expKeys: [0],  // experience keys (just index for now)
       expComp: [],
       expPos: [],
       expStart: [],
       expEnd: [],
       expDesc: [],
 
-      eduKeys: [1,2],  // education keys (just index for now)
+      eduKeys: [0,1],  // education keys (just index for now)
       course: [],
       uni: [],
       eduStart: [],
@@ -90,22 +90,22 @@ class App extends Component {
     this.setState({
       expComp: e.target.value,
     });
-
-
+    console.log('the key is: '+key)
   }
-  expPos(e) {
+
+  expPos(e, key) {
     e.preventDefault();
 
   }
-  expStart(e) {
+  expStart(e, key) {
     e.preventDefault();
 
   }
-  expEnd(e) {
+  expEnd(e, key) {
     e.preventDefault();
 
   }
-  expDesc(e) {
+  expDesc(e, key) {
     e.preventDefault();
 
   }
@@ -123,23 +123,23 @@ class App extends Component {
   }
 
   // Education Functions
-  course(e) {
+  course(e, key) {
     e.preventDefault();
 
   }
-  uni(e) {
+  uni(e, key) {
     e.preventDefault();
 
   }
-  eduStart(e) {
+  eduStart(e, key) {
     e.preventDefault();
 
   }
-  eduEnd(e) {
+  eduEnd(e, key) {
     e.preventDefault();
 
   }
-  eduDesc(e) {
+  eduDesc(e, key) {
     e.preventDefault();
 
   }

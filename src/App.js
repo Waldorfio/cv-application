@@ -181,7 +181,7 @@ class App extends Component {
             summary = {this.summary}
           />
 
-          { this.state.experience.map((num, idx) => (
+          { this.state.experience.map((idx) => (
           <ExperienceInfo
             keyy = {idx}
             company = {this.company}

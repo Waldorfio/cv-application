@@ -17,35 +17,20 @@ class App extends Component {
       phone: '0412345678',
       location: 'Brisbane, QLD',
       summary: 'A summary piece of text should be written here.',
-      
-      // experience: {
-      //   expComp: [{value: ''}],
-      //   expPos:  {id: 'a', value: ''},
-      //   expStart: {id: 'a', value: ''},
-      //   expEnd: {id: 'a', value: ''},
-      //   expDesc: {id: 'a', value: ''},
-      // },
-      // company: {
-      //   course: {id: 'a', value: ''},
-      //   uni: {id: 'a', value: ''},
-      //   eduStart: {id: 'a', value: ''},
-      //   eduEnd: {id: 'a', value: ''},
-      //   eduDesc: {id: 'a', value: ''},
-      // },
 
-      experience: [1,2],
-
+      expKeys: [1],  // experience keys (just index for now)
       expComp: [],
       expPos: [],
       expStart: [],
       expEnd: [],
       expDesc: [],
 
-      // course: [],
-      // uni: [],
-      // eduStart: [],
-      // eduEnd: [],
-      // eduDesc: [],
+      eduKeys: [1,2],  // education keys (just index for now)
+      course: [],
+      uni: [],
+      eduStart: [],
+      eduEnd: [],
+      eduDesc: [],
     }
 
     // Binding functions
@@ -124,16 +109,17 @@ class App extends Component {
     e.preventDefault();
 
   }
-  expAdd(e) { // NOT WORKING YET, TYPEERROR: expeirence is not iterable
-    alert('adding exp...');
+  expAdd(e) {
+    console.log('adding exp...');
+    // Add a new key, +1 of last number in array
     this.setState(prevState => ({
-      experience: [...prevState.experience, this.state.experience[this.state.experience.length - 1] + 1],
+      expKeys: [...prevState.expKeys, this.state.expKeys[this.state.expKeys.length - 1] + 1],
     }))
-    console.log('exp keys: '+this.state.experience)
+    console.log('exp keys: '+this.state.expKeys)
   }
   expDel(key) {
-    alert('deleting exp: '+key)
-    this.setState({experience: this.state.experience.filter(a => a !== key)}) /// Delete item of specific key
+    console.log('deleting exp: '+key)
+    this.setState({expKeys: this.state.expKeys.filter(a => a !== key)}) /// Delete item of specific key
   }
 
   // Education Functions
@@ -157,11 +143,16 @@ class App extends Component {
     e.preventDefault();
 
   }
-  eduAdd() {
-    alert('adding education');
+  eduAdd(e) {
+    // Add a new key, +1 of last number in array
+    this.setState(prevState => ({
+      eduKeys: [...prevState.eduKeys, this.state.eduKeys[this.state.eduKeys.length - 1] + 1],
+    }))
+    console.log('exp keys: '+this.state.eduKeys)
   }
-  eduDel() {
-    alert('deleting education')
+  eduDel(key) {
+    console.log('deleting exp: '+key)
+    this.setState({eduKeys: this.state.eduKeys.filter(a => a !== key)}) /// Delete item of specific key
   }
 
   render() {
@@ -177,7 +168,7 @@ class App extends Component {
             summary = {this.summary}
           />
 
-          { this.state.experience.map((idx) => (
+          { this.state.expKeys.map((idx) => (
           <ExperienceInfo
             keyy = {idx}
             company = {this.company}
@@ -189,25 +180,17 @@ class App extends Component {
             expAdd = {this.expAdd}
           />)) }
 
-          {/* <ExperienceInfo
-            key = {this.state.i}
-            company = {this.company}
-            expPos = {this.expPos}
-            expStart = {this.expStart}
-            expEnd = {this.expEnd}
-            expDesc = {this.expDesc}
-            expDel = {this.expDel}
-            expAdd = {this.expAdd}
-          /> */}
-          <EducationInfo 
-            course = {this.course}
-            uni = {this.uni}
-            eduStart = {this.eduStart}
-            eduEnd = {this.eduEnd}
-            eduDesc = {this.eduDesc}
-            eduDel = {this.eduDel}
-            eduAdd = {this.eduAdd}
-          />
+          { this.state.eduKeys.map((idx) => (
+            <EducationInfo
+              keyy = {idx}
+              course = {this.course}
+              uni = {this.uni}
+              eduStart = {this.eduStart}
+              eduEnd = {this.eduEnd}
+              eduDesc = {this.eduDesc}
+              eduDel = {this.eduDel}
+              eduAdd = {this.eduAdd}
+          />)) }
         </div>
         
         <FormView output={this.state}/> 

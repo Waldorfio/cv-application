@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 
 class EducationInfo extends Component {
     render() {
-        const { course, uni, eduStart, eduEnd, eduDesc, eduDel, eduAdd } = this.props;
+        const { keyy, course, uni, eduStart, eduEnd, eduDesc, eduDel, eduAdd } = this.props;
         return (
-            <div id='education-info'>
+            <div id='education-info' className={keyy} key={keyy}>
                 <form id='education-info-form'>
                     Education
                     <label><input type="text" onChange={course} placeholder="Course"></input></label>
@@ -14,8 +14,8 @@ class EducationInfo extends Component {
                     <label><input type="text" onChange={eduDesc} placeholder="Description"></input></label>
                 </form>
                 <div className="btn-group">
-                    <input type='button' value='Delete' onClick={eduDel}></input>
-                    <input type='button' value='Add' onClick={eduAdd}></input>
+                    <input type='button' value='Delete' onClick={(e) => eduDel(keyy)}></input>
+                    <input type='button' value='Add' onClick={(e) => eduAdd(keyy)}></input>
                 </div>
             </div>
         )

@@ -1,9 +1,11 @@
 # Project: CV Application
 A CV application website, developed to enforce my learnings on React fundamentals (components and states management).
-Application developed using React and CSS3. Built using the create-react-app.
+Application developed using React.js and CSS. Built using the create-react-app.
 
 ### Features
 - Allows users to create their own resume using a ready made template
+
+![](screencap.PNG)
 
 ### Goals
 - Practice the fundamentals of state and component management with Class based components
@@ -12,6 +14,7 @@ Application developed using React and CSS3. Built using the create-react-app.
 ### Challenges Faced
 - Creating a stateful app with multiple children able to make dynamic changes to the parent state
 - Passing states between children and parents -> pass functions setting the state for two way state management
+- Key management: neatly creating keys for states and passing them between compoonents
 - Adapting to class based component syntax in React
 
 ## How to run the app
@@ -27,10 +30,11 @@ OR
 4.	Go to  http://localhost:8080/ in your browser, and start the app!
 
 ## How to use the app
-1. 
+1. Enter your details in the form
+2. Use the Add/Delete button to add and remove sections for experience/education
 
 ## Future Features
-- Refactor and simplify parent methods
+- Refactor and simplify parent methods, and key management
 - Refactor code to TypeScript
 - Add option to export/generate Resume to PDF
 

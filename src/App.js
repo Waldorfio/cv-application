@@ -3,13 +3,15 @@ import './styles/style.css';
 import GeneralInfo from './components/GeneralInfo'
 import ExperienceInfo from './components/ExperienceInfo'
 import EducationInfo from './components/EducationInfo'
-import FormView from './components/FormView'
+import FormGeneral from './components/FormGeneral'
+import FormExp from './components/FormExp'
+import FormEdu from './components/FormEdu'
 
 class App extends Component {
   constructor(props) {
     super(props)
     
-    // Setting state
+    // Setting initial state types, and values (to display default vals)
     this.state = {
       fullName: 'John Doeman',
       title: 'Software Engineer',
@@ -19,18 +21,20 @@ class App extends Component {
       summary: 'A summary piece of text should be written here.',
 
       expKeys: [0],  // experience keys (just index for now)
-      expComp: [],
-      expPos: [],
-      expStart: [],
-      expEnd: [],
-      expDesc: [],
+      expComp: ['A Company'],
+      expPos: ['Software Engineer'],
+      expStart: ['2020'],
+      expEnd: ['Present'],
+      expDesc: ['I love this job'],
 
-      eduKeys: [0,1],  // education keys (just index for now)
-      course: [],
-      uni: [],
-      eduStart: [],
-      eduEnd: [],
-      eduDesc: [],
+      eduKeys: [0],  // education keys (just index for now)
+      course: ['Masters of Engineering'],
+      uni: ['The University of Western Australia'],
+      eduStart: ['2015'],
+      eduEnd: ['Present'],
+      eduDesc: ['Thesis: Classification of Deep Learning Galaxies'],
+
+      value: {key: '', text: ''}, // A template object to create other states from
     }
 
     // Binding functions
@@ -87,33 +91,40 @@ class App extends Component {
   // Experience Functions
   company(e, key) {
     e.preventDefault();
-    this.setState({
-      expComp: e.target.value,
-    });
-    console.log('the key is: '+key)
+    const temp = this.state.expComp;
+    const newArr = [...temp.slice(0, key), e.target.value, ...temp.slice(key + 1)]
+    this.setState({ expComp: newArr })
   }
-
   expPos(e, key) {
     e.preventDefault();
-
+    const temp = this.state.expPos;
+    const newArr = [...temp.slice(0, key), e.target.value, ...temp.slice(key + 1)]
+    this.setState({ expPos: newArr })
   }
   expStart(e, key) {
     e.preventDefault();
-
+    const temp = this.state.expStart;
+    const newArr = [...temp.slice(0, key), e.target.value, ...temp.slice(key + 1)]
+    this.setState({ expStart: newArr })
   }
   expEnd(e, key) {
     e.preventDefault();
-
+    const temp = this.state.expEnd;
+    const newArr = [...temp.slice(0, key), e.target.value, ...temp.slice(key + 1)]
+    this.setState({ expEnd: newArr })
   }
   expDesc(e, key) {
     e.preventDefault();
-
+    const temp = this.state.expDesc;
+    const newArr = [...temp.slice(0, key), e.target.value, ...temp.slice(key + 1)]
+    this.setState({ expDesc: newArr })
   }
   expAdd(e) {
     console.log('adding exp...');
     // Add a new key, +1 of last number in array
     this.setState(prevState => ({
       expKeys: [...prevState.expKeys, this.state.expKeys[this.state.expKeys.length - 1] + 1],
+      expComp: [...prevState.expComp, ''],
     }))
     console.log('exp keys: '+this.state.expKeys)
   }
@@ -125,23 +136,33 @@ class App extends Component {
   // Education Functions
   course(e, key) {
     e.preventDefault();
-
+    const temp = this.state.course;
+    const newArr = [...temp.slice(0, key), e.target.value, ...temp.slice(key + 1)]
+    this.setState({ course: newArr })
   }
   uni(e, key) {
     e.preventDefault();
-
+    const temp = this.state.uni;
+    const newArr = [...temp.slice(0, key), e.target.value, ...temp.slice(key + 1)]
+    this.setState({ uni: newArr })
   }
   eduStart(e, key) {
     e.preventDefault();
-
+    const temp = this.state.eduStart;
+    const newArr = [...temp.slice(0, key), e.target.value, ...temp.slice(key + 1)]
+    this.setState({ eduStart: newArr })
   }
   eduEnd(e, key) {
     e.preventDefault();
-
+    const temp = this.state.eduEnd;
+    const newArr = [...temp.slice(0, key), e.target.value, ...temp.slice(key + 1)]
+    this.setState({ eduEnd: newArr })
   }
   eduDesc(e, key) {
     e.preventDefault();
-
+    const temp = this.state.eduDesc;
+    const newArr = [...temp.slice(0, key), e.target.value, ...temp.slice(key + 1)]
+    this.setState({ eduDesc: newArr })
   }
   eduAdd(e) {
     // Add a new key, +1 of last number in array
@@ -193,7 +214,21 @@ class App extends Component {
           />)) }
         </div>
         
-        <FormView output={this.state}/> 
+        <div id="view-container">
+
+          <FormGeneral output={this.state}/>
+          { this.state.expKeys.map((idx) => (
+            <FormExp
+              keyy = {idx}
+              output = {this.state}
+          />)) }
+          { this.state.eduKeys.map((idx) => (
+            <FormEdu
+              keyy = {idx}
+              output = {this.state}
+          />)) }
+
+        </div>
 
       </div>
     );

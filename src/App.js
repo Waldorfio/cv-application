@@ -62,7 +62,7 @@ class App extends Component {
     this.eduAdd = this.eduAdd.bind(this);
   }
 
-  // General Functions
+  // Functions to update General Section of CV
   fullName(e) {
     e.preventDefault();
     this.setState({fullName: e.target.value});
@@ -88,7 +88,7 @@ class App extends Component {
     this.setState({summary: e.target.value});
   }
 
-  // Experience Functions
+  // Functions to update Experience Section of CV
   company(e, key) {
     e.preventDefault();
     const temp = this.state.expComp;
@@ -133,7 +133,7 @@ class App extends Component {
     this.setState({expKeys: this.state.expKeys.filter(a => a !== key)}) /// Delete item of specific key
   }
 
-  // Education Functions
+  // Functions to update Education Section of CV
   course(e, key) {
     e.preventDefault();
     const temp = this.state.course;
@@ -189,7 +189,7 @@ class App extends Component {
             summary = {this.summary}
           />
 
-          { this.state.expKeys.map((idx) => (
+          { this.state.expKeys.map((idx) => ( // Render component according to each key
           <ExperienceInfo
             keyy = {idx}
             company = {this.company}
@@ -201,7 +201,7 @@ class App extends Component {
             expAdd = {this.expAdd}
           />)) }
 
-          { this.state.eduKeys.map((idx) => (
+          { this.state.eduKeys.map((idx) => ( // Render component according to each key
             <EducationInfo
               keyy = {idx}
               course = {this.course}
@@ -217,12 +217,12 @@ class App extends Component {
         <div id="view-container">
 
           <FormGeneral output={this.state}/>
-          { this.state.expKeys.map((idx) => (
+          { this.state.expKeys.map((idx) => ( // Render component according to each key
             <FormExp
               keyy = {idx}
               output = {this.state}
           />)) }
-          { this.state.eduKeys.map((idx) => (
+          { this.state.eduKeys.map((idx) => ( // Render component according to each key
             <FormEdu
               keyy = {idx}
               output = {this.state}

@@ -1,6 +1,7 @@
 # Project: CV Application
 A CV application website, developed to enforce my learnings on React fundamentals (components and states management).
 Application developed using React.js and CSS. Built using the create-react-app.
+## [Live Link 👈](https://waldorfio.github.io/cv-application/)
 
 ### Features
 - Allows users to create their own resume using a ready made template
@@ -18,8 +19,7 @@ Application developed using React.js and CSS. Built using the create-react-app.
 - Adapting to class based component syntax in React
 
 ## How to run the app
-### 1. Click the hosted link below
-#### [Live Link 👈](https://waldorfio.github.io/cv-application/)
+### 1. Click the [hosted link](https://waldorfio.github.io/cv-application/)
 
 OR
 

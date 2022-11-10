@@ -39,3 +39,4 @@ OR
 - Add option to export/generate Resume to PDF
 
 ## Dependencies
+- React

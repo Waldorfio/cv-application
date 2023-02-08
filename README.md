@@ -6,7 +6,7 @@ Application developed using React.js and CSS. Built using the create-react-app.
 ### Features
 - Allows users to create their own resume using a ready made template
 
-![](screencap.PNG)
+![](animation4.gif)
 
 ### Goals
 - Practice the fundamentals of state and component management with Class based components
